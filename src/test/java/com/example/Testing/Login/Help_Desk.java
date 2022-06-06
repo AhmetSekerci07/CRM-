@@ -30,9 +30,6 @@ public class Help_Desk extends TestBase {
         password.sendKeys("UserUser");
         loginbt.click();
 
-        Thread.sleep(3000);
-
-
 
         String exptedtedTitle = "(50) Portal";
         String  actualTitle = driver.getTitle();
@@ -66,10 +63,6 @@ public class Help_Desk extends TestBase {
 
         driver.get("http://login2.nextbasecrm.com/");
 
-
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
-        driver.get("http://login2.nextbasecrm.com/");
-
         WebElement username3 = driver.findElement(By.name("USER_LOGIN"));
         WebElement password3 = driver.findElement(By.name("USER_PASSWORD"));
         WebElement loginbt3 = driver.findElement(By.className("login-btn"));
@@ -88,64 +81,59 @@ public class Help_Desk extends TestBase {
     }
 
       //----------------TEST 4 ---------------------------------
+@Test
+    public void HdTest4(){
 
-//        WebDriver driver4 = WebDriverFactory.getDriver("chrome");
-//        driver4.get("http://login2.nextbasecrm.com/");
-//
-//        WebElement username4 = driver4.findElement(By.name("USER_LOGIN"));
-//        WebElement password4 = driver4.findElement(By.name("USER_PASSWORD"));
-//        WebElement loginbt4 = driver4.findElement(By.className("login-btn"));
-//
-//        username4.sendKeys("Invalied@cybertekschool.com");
-//
-//        password4.sendKeys("");
-//
-//        loginbt4.click();
-//
-//        WebElement errMes4 = driver4.findElement(By.className("errortext"));
-//        String exptedtedTitle4 = "Incorrect login or password";
-//
-//        String ErrorMessage4 = errMes4.getText();
-//        System.out.println(ErrorMessage);
-//
-//
-//        if (exptedtedTitle4.equals(ErrorMessage3)) {
-//            System.out.println("Title Correct ~ Test Case #4 Passed ");
-//            driver4.quit();
-//        } else {
-//            System.err.println("Title Failed ~ Test Case #4 Failed ");
-//            driver4.quit();
-//        }
-//        //----------TEST CASE 5 ------------------------
-//
-//        WebDriver driver5 = WebDriverFactory.getDriver("chrome");
-//        driver5.get("http://login2.nextbasecrm.com/");
-//
-//        WebElement username5 = driver5.findElement(By.name("USER_LOGIN"));
-//        WebElement password5 = driver5.findElement(By.name("USER_PASSWORD"));
-//        WebElement loginbt5 = driver5.findElement(By.className("login-btn"));
-//
-//        username5.sendKeys("Invalied@cybertekschool.com");
-//
-//        password5.sendKeys("");
-//
-//        loginbt5.click();
-//
-//        WebElement errMes5 = driver5.findElement(By.className("errortext"));
-//        String exptedtedTitle5 = "Incorrect login or password";
-//
-//        String ErrorMessage5 = errMes5.getText();
-//        System.out.println(ErrorMessage);
-//
-//
-//        if (exptedtedTitle5.equals(ErrorMessage3)) {
-//            System.out.println("Title Correct ~ Test Case #5 Passed ");
-//            driver5.quit();
-//        } else {
-//            System.err.println("Title Failed ~ Test Case #5 Failed ");
-//            driver5.quit();
-//        }
-//
+    driver.get("http://login2.nextbasecrm.com/");
+
+        WebElement username4 = driver.findElement(By.name("USER_LOGIN"));
+        WebElement password4 = driver.findElement(By.name("USER_PASSWORD"));
+        WebElement loginbt4 = driver.findElement(By.className("login-btn"));
+
+        username4.sendKeys("Invalied@cybertekschool.com");
+
+        password4.sendKeys("");
+
+        loginbt4.click();
+
+        WebElement errMes4 = driver.findElement(By.className("errortext"));
+
+        String exptedtedTitle4 = "Incorrect login or password";
+        String ErrorMessage4 = errMes4.getText();
+
+        Assert.assertEquals(exptedtedTitle4,ErrorMessage4);
+
+
+
+
+}
+
+        //----------TEST CASE 5 ------------------------
+
+
+    @Test
+
+    public void HdTest5 (){
+
+        driver.get("http://login2.nextbasecrm.com/");
+
+        WebElement username5 = driver.findElement(By.name("USER_LOGIN"));
+        WebElement password5 = driver.findElement(By.name("USER_PASSWORD"));
+        WebElement loginbt5 = driver.findElement(By.className("login-btn"));
+        username5.sendKeys("Invalied@cybertekschool.com");
+        password5.sendKeys("");
+        loginbt5.click();
+
+        WebElement errMes5 = driver.findElement(By.className("errortext"));
+        String exptedtedTitle5 = "Incorrect login or password";
+        String ErrorMessage5 = errMes5.getText();
+
+        Assert.assertEquals(exptedtedTitle5,ErrorMessage5);
+
+
+
+    }
+
     }
 
 
